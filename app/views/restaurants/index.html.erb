@@ -1,0 +1,7 @@
+<h1>Restaurant#index</h1>
+<p><%= link_to "Cretae a Restaurant", new_restaurant_path %></p>
+<% @restaurant.each do |a| %>
+<p><%= link_to a.name, restaurant_path(a) %></p>
+<p><%= link_to "delete", restaurant_path(a), method: :destroy %></p>
+ <% end %>
+
